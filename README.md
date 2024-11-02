@@ -1,57 +1,67 @@
-Penulis: [nama_penulis](link_twt)
+Penulis: [Naufal](https://x.com/0xfal)
 
-# Pengenalan
-Bab ini berisi pengenalan mengenai nama_project
-
-## Nama_Project
 > [!NOTE]
-> berikan_description_singkat_mengenai_project_tersebut
+> **WHAT IS Rivalz?**\
+> .
 
-### Investor
-taroh_img_investor_jika_ada
+# Tutorial Rivalz rClient CLI
 
-# Tutorial XXX
-Bab ini berisi tutorial cara menjalankan XXX
+## 1. Requirement
 
-## Requirement
-Syarat menjalankan XXX
-- Spek Komputer
-  
-| Name | Minimum |
-| ------------- | ------------- |
-| Operating System  | OS_NAME  |
-| CPU  | X Cores  |
-| RAM  | X GB  |
-| SSD  | XX GB  |
-- item_2_dan_seterusnya_jika_ada
+Kamu bisa gunakan VPS atau PC pribadi dengan kebutuhan:
 
-> [!TIP]
-> Kami menggunakan Digital Ocean dengan speksifikasi `XX/ X Core/ X GB RAM/ XX GB SSD`. Jika kamu membutuhkan VPS, kami memiliki link gratis credit VPS DigitalOcean sebesar $200. Cukup untuk menjalankan XXX selama XX . Daftar sekarang dengan [link utama](link_reff_do_kamu) / [link cadangan](link_reff_do_2_kamu) untuk mendapatkannya.
-  
-## Dependencies
+| ✅ Linux | ✅ macOS | ✅ Windows (WSL) |
+| ------------- | ------------- | ------------- |
 
-### Install X 
+| Part | Minimum | Recommended |
+| ------------- | ------------- | ------------- |
+| CPU | - | 4 Cores |
+| RAM | - | 4 GB |
+| SSD | - | 50 GB |
+
+Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mungkin akan sedikit berbeda.
+
+## 2. Dependency
+
+### 2.1 Install Node Version Manager
+
 ```
-sudo apt-get install xxxx
-```
-
-## Menjalankan XXX
-
-### Run XXX
-```
-code blocks for commands
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
-## Help
+### 2.2 Install Node.js
 
-Join komunitas [Discord ZuperHunt](https://t.co/n7TeWVlA48) jika kamu ada pertanyaan.
+```
+nvm install node
+```
 
-## Change Logs
+### 2.3 Install `rivalz-node-cli`
 
-* 0.0.1
-    * Initial Release
+```
+npm i -g rivalz-node-cli
+```
 
-## Acknowledgments
+## 3. Execution
 
-Referensi
-* [nama_referensi](link_referensi)
+### 3.1 Connect Wallet to Dashboard
+
+Go to [Rivalz dashboard](https://rivalz.ai?r=fal), connect your EVM wallet and sign.
+
+### 3.2 Run rClient
+
+```
+rivalz run
+```
+
+Enter your EVM wallet that you've connected to Rivalz dashboard. Enter 25 GB ~ 50 GB for disk size.
+
+---
+
+Reach us if you have any question:\
+ZuperHunt's [Discord server](https://discord.gg/ZuperHunt) | [X(Twitter)](https://twitter.com/ZuperHunt)
+
+# Acknowledgements
+
+* [Rivalz Docs](https://docs.rivalz.ai/rclients-ocy-depin/rclient-cli-guide)
