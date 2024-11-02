@@ -23,7 +23,13 @@ Tutorial ini dibuat menggunakan Linux (Ubuntu), untuk sistem operasi lainnya mun
 
 ## 2. Dependency
 
-### 2.1 Install Node Version Manager
+### 2.1 Install Tmux
+
+```
+apt install tmux
+```
+
+### 2.2 Install Node Version Manager
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -31,13 +37,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
-### 2.2 Install Node.js
+### 2.3 Install Node.js
 
 ```
 nvm install node
 ```
 
-### 2.3 Install `rivalz-node-cli`
+### 2.4 Install `rivalz-node-cli`
 
 ```
 npm i -g rivalz-node-cli
@@ -45,17 +51,29 @@ npm i -g rivalz-node-cli
 
 ## 3. Execution
 
-### 3.1 Connect Wallet to Dashboard
+### 3.1 Create a Session
+
+Ganti `<SESSION_NAME>` menjadi terserahmu, rekomendasi: `rivalz`.
+
+```
+tmux new -s <SESSION_NAME>
+```
+
+### 3.2 Connect Wallet to Dashboard
 
 Go to [Rivalz dashboard](https://rivalz.ai?r=fal), connect your EVM wallet and sign.
 
-### 3.2 Run rClient
+### 3.3 Run rClient
 
 ```
 rivalz run
 ```
 
 Enter your EVM wallet that you've connected to Rivalz dashboard. Enter 25 GB ~ 50 GB for disk size.
+
+You'll see this output if normal:
+
+![image](https://github.com/user-attachments/assets/f7d0ab93-fae8-4fc0-9d18-30f19bb21d78)
 
 ---
 
